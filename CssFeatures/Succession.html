@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承性Inherited</title>
+    <!--给父元素设置一些属性，子元素也可以使用-->
+    <!--不是所有属性都可以继承，只有以color/font/text/line开头的属性才可以继承-->
+    <!--css继承中，不仅儿子，而且后代也可以继承-->
+    <!--特殊性：a标签的文字颜色和下划线不能继承,h标签大小不能继承-->
+    <style>
+        div {
+            color: darkred;
+            font-size: 20px;
+            background: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<!--应用场景：一般用于设置网页的共性信息，文字颜色，字体，文字大小等-->
+<div>
+    <a href="#">我是超链接</a>
+</div>
+<div>
+    <p>我是段落</p>
+</div>
+<div>
+    <h1>大标题</h1>
+</div>
+</body>
+</html>

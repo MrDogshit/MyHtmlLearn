@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层叠性</title>
+    <!--css处理冲突的能力，在多个选择器选中同一个标签，又设置相同属性时，就会发生层叠性-->
+    <style>
+        p {
+            color: red;
+        }
+        .para {
+            color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<p class="para" id="id1">段落1</p>
+</body>
+</html>
