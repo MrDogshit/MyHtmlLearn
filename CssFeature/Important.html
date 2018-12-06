@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Important</title>
+    <!--用于提升某个直接选中标签的选择器中的某个属性的优先级，只能用于直接选中，不能间接选中,而且只会提升指定属性的优先级，写在制定值的分号前-->
+    <style>
+        p {
+
+        }
+
+        #id1 {
+            color: blue;
+            font-size: 10px;
+        }
+
+        .para {
+            color: red !important;
+            font-size: 30px;
+        }
+
+        ul{
+            color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <p id="id1" class="para">我是段落</p>
+    </li>
+</ul>
+</body>
+</html>
