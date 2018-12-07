@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--精灵图是一种图像合成技术，一般用于减少服务器请求次数，降低服务器压力-->
+    <!--使用：配合背景图片和背景定位来使用,请求获得一副大的图片，然后在图片中找到需要的小图片来显示-->
+    <title>精灵图</title>
+    <style>
+        .box{
+            /*定位图片中的人头*/
+            width: 200px;
+            height: 200px;
+            background: url(BgImg.jpg) no-repeat -800px -500px;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
