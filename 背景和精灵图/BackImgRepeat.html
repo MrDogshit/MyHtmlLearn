@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景平铺</title>
+    <!--应用场景：给网页设置背景图片，背景图片较小，则响应会比较快，提升网页速度-->
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+        }
+        .box1{
+            background-image: url(#);
+            /*repeat-x:水平方向平铺,repeat-y:垂直方向平铺,no-repeat:不平铺 repeat:默认，水平垂直都平铺*/
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+</body>
+</html>

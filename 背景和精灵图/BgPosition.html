@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景定位</title>
+    <style>
+        div {
+            width: 1200px;
+            height: 800px;
+        }
+        .box1{
+            background-color: red;
+            background-image: url(BgImg.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+    </style>
+</head>
+<body>
+<!--background-position:控制图片的位置
+格式:background-position: 水平方向 垂直方向;
+水平取值:left center right  xxpx(取值可以为-)
+垂直取值:top center bottom  xxpx(取值可以为-)
+应用：凸显重要信息,在拉伸或缩小后重要信息仍然显示中间
+-->
+<!--同一个标签可以同时设置背景颜色和背景图片，如果同时存在，图片覆盖颜色-->
+<div class="box1"></div>
+</body>
+</html>
