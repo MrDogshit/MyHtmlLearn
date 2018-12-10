@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距合并现象</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+        }
+        div{
+            height: 100px;
+            border: 2px solid #000;
+        }
+        .cl1{
+            margin-right: 40px;
+        }
+        .cl2{
+            margin-left: 50px;
+        }
+        .box1{
+            margin-bottom: 50px;
+        }
+        .box2{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--默认布局的垂直方向上，默认情况外边距不会叠加，会出现合并现象，选取最大值合并-->
+<span class="cl1">这是span</span><span class="cl2">这是span</span>
+<div class="box1">这是div</div>
+<div class="box2">这是div</div>
+</body>
+</html>

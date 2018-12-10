@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距</title>
+    <!--标签和标签之间的距离就是外边距-->
+    <!--格式：
+        margin-top:;
+        margin-right:;
+        margin-bottom:;
+        margin-left:;
+        margin: 上 右 下 左
+        规则与边框，内边距一致
+    -->
+    <!--外边距部分没有背景颜色-->
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+        }
+
+        div {
+            height: 100px;
+            border: 2px solid #000;
+        }
+
+        .box1 {
+            margin: 5px 10px 20px 50px;
+            background-color: red;
+        }
+
+        .box {
+
+        }
+    </style>
+</head>
+<body>
+<span class="box1">水水水水水</span><span class="cl2">水水水水水</span><span class="cl3">水水水水水</span>
+<div class="box"></div>
+
+</body>
+</html>
