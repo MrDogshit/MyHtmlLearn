@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行高和字号恢复</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+            margin:0;padding:0
+        }
+        .box1{
+            width: 700px;
+            height: 110px;
+            background-color: gray;
+            padding: 1px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            line-height: 40px;
+            font-family: "黑体";
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--
+企业开发中，盒子中存储的是文字，一般情况下会以左边内边距为基准，不会以右边内边距为基准，因为右边内边距有误差，如果右边放不下一个文字，文字就会换行显示，文字和内边距之间就会有误差
+顶部内边距并不是边框到文字顶部的距离，而是边框到行高顶部的距离
+-->
+<div class="box1">
+    <p>葬爱就是一种非主流文化的常用词。是当今网络流行术语。且流行于非主流杀马特之中。葬，即埋葬，爱，即爱情，翻译成外语就是bury love </p>
+</div>
+</body>
+</html>

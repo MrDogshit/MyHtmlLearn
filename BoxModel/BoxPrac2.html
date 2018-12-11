@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型练习</title>
+    <!--小盒子放置到中间,两种方式：大盒子设置内边距，小盒子设置外边距-->
+    <style>
+        .big {
+            /*box-sizing: border-box;*/
+            width: 500px;
+            height: 500px;
+            /*padding: 125px;*/
+            /*border: 1px solid #000;*/
+            background-color: blueviolet;
+        }
+        .small{
+            /*如果两个盒子是嵌套关系，那么设置里面的盒子的顶部的外边距，外面的盒子也会被顶下来。如果外面的盒子不想被一起顶下来，可以给外盒子设置边框属性*/
+            /*企业开发中，如果需要控制嵌套关系盒子间的距离，首先考虑padding，其次在考虑margin, margin本质用于控制兄弟间间隙的*/
+            /*嵌套关系中，可以利用margin:0 auto;的方式来让里面盒子在外面盒子中水平居中，只对水平有效，垂直无效*/
+            margin: 0 auto;
+            /*margin-top: 100px;*/
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="big">
+    <div class="small">小盒子</div>
+</div>
+
+</body>
+</html>

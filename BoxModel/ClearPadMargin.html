@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空默认边距,行高和字号</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+            margin:0;padding:0
+        }
+        .box1{
+            width: 700px;
+            height: 110px;
+            background-color: gray;
+            padding: 1px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<!--
+企业开发中为了更好的控制盒子的宽高，所以在企业开发中，编写代码前第一件事就是清空默认边距
+格式：
+*{
+            margin: 0px;
+            padding: 0px;
+        }
+注意：通配符选择器会便利当前界面所有标签，所以性能较差，建议使用如下方式
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+-->
+<!--
+行高：CSS字体中所有字体都有行高，是指一行文字的高度。
+注意：行高和盒子高度不是一个概念
+规律：默认情况下文字在行高中垂直居中，企业开发中经常将盒子高度和行高设置一致，就可以保证一行文字在盒子高度中垂直居中；如果有多行文字，就不能使用是指行高来实现文字居中，只能用padding
+-->
+<div class="box1">
+    <p>葬爱就是一种非主流文化的常用词。是当今网络流行术语。且流行于非主流杀马特之中。葬，即埋葬，爱，即爱情，翻译成外语就是bury love </p>
+</div>
+</body>
+</html>
