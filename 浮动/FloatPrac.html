@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0 auto;
+        }
+        .flheader{
+            height: 100px;
+            width: 980px;
+            /*background: black;*/
+        }
+        .flheader .headleft{
+            float: left;
+            width: 250px;
+            height: 100px;
+            background-color: pink;
+        }
+        .flheader .headright1{
+            float: right;
+            width: 150px;
+            height: 50px;
+            background-color: skyblue;
+        }
+        .flheader .headright2{
+            float: right;
+            width: 650px;
+            height: 50px;
+            background-color: purple;
+
+        }
+        .flcontent{
+            margin-top: 10px;
+            height: 400px;
+            width: 980px;
+            /*background-color: blue;*/
+        }
+        .flcontent .aside{
+            float: left;
+            width: 320px;
+            height: 400px;
+            background-color: yellow;
+        }
+        .flcontent .article{
+            float: right;
+            width: 650px;
+            height: 400px;
+            background-color: black;
+        }
+        .flcontent .article .articleTop{
+            width: 650px;
+            height: 350px;
+            background-color: blue;
+        }
+        .flcontent .article .articleBottom {
+            margin-top: 10px;
+            width: 650px;
+            height: 40px;
+            background-color: saddlebrown;
+        }
+        .flbottom{
+            margin-top: 10px;
+            height: 40px;
+            width: 980px;
+            background-color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+<div class="flheader">
+    <div class="headleft"></div>
+    <div class="headright1"></div>
+    <div class="headright2"></div>
+</div>
+<div class="flcontent">
+    <div class="aside"></div>
+    <div class="article">
+        <div class="articleTop">
+
+        </div>
+        <div class="articleBottom"></div>
+    </div>
+
+</div>
+<div class="flbottom"></div>
+</body>
+</html>
