@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动方式1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            width: 100px;
+            float: left;
+        }
+        .box1{
+            height: 30px;
+            background-color: red;
+        }
+        .box1 p{
+            background-color: blue;
+        }
+        .box2{
+            background-color: green;
+        }
+        .box2 p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.方式一：给父元素设置高度。
+注意：企业开发中，能不设置高度就不设置高度
+-->
+<div class="box1">
+    <p>我是文字</p>
+    <p>我是文字</p>
+    <p>我是文字</p>
+</div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

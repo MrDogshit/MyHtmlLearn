@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动方式3-内墙法</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            width: 100px;
+            float: left;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box1 p{
+            background-color: blue;
+        }
+        .box2{
+            background-color: green;
+        }
+        .box2 p{
+            background-color: yellow;
+        }
+        .wall{
+            clear: both;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.清除浮动第三种方式：
+隔墙法：
+外墙法：在这两个盒子中间添加一个额外的块级元素，然后给这个额外的块级元素设置clear:both 属性 注意：外墙法可以让第二个盒子使用margin-top属性
+但是不能让第一个盒子使用margin-bottom属性，可以对外墙设置高度来代替
+-->
+<div class="box1">
+    <p>我是文字</p>
+    <p>我是文字</p>
+    <p>我是文字</p>
+</div>
+<div class="wall"></div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

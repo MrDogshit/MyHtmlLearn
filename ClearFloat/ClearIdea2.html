@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动方式2，clear属性</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            width: 100px;
+            float: left;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box1 p{
+            background-color: blue;
+        }
+        .box2{
+            background-color: green;
+            clear: both;
+        }
+        .box2 p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.方式2：给后面的盒子添加clear属性。
+clear属性取值：
+none:默认取值，按照浮动元素的排序规则排序
+left:不要找前面的左浮动元素
+right:不要找前面的右浮动元素
+both:不要找前面的左右浮动元素
+注意：当给某个元素添加clear属性后，那么这个属性的margin属性就会失效
+失效原因：
+-->
+<div class="box1">
+    <p>我是文字</p>
+    <p>我是文字</p>
+    <p>我是文字</p>
+</div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>
