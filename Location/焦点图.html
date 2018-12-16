@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            border: 2px solid #000;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        div img {
+            width: 520px;
+            height: 280px;
+        }
+
+        div span {
+            display: block;
+            width: 40px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+        div ol{
+            /*float: left;*/
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: block;
+            list-style: none;
+            width: 200px;
+            height: 40px;
+            background-color: gray;
+            color: rgba(255,255,255,0.7);
+        }
+        ol li{
+            box-sizing: border-box;
+            float: left;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        div .leftArrow{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -40px;
+        }
+        div .rightArrow{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../张学友_梦中的你_4.jpg" alt="">
+    <span class="leftArrow">&lt;</span>
+    <span class="rightArrow">&gt;</span>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>

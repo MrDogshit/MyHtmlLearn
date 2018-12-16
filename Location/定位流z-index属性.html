@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位流z-index属性</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .pro1{
+            background-color: red;
+            position: relative;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .pro2{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            background-color: green;
+        }
+        .pro3{
+            position: fixed;
+            left: 100px;
+            top: 100px;
+            background-color: blue;
+        }
+        .father1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            /*z-index: 2;*/
+        }
+        .father2{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: palegreen;
+            /*z-index: 1;*/
+        }
+        .son1{
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            position: absolute;
+            left: 200px;
+            top: 250px;
+        }
+        .son2{
+            z-index: 2;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            top: 50px;
+            left: 250px;
+        }
+    </style>
+</head>
+<body>
+<!--
+z-index:
+默认情况下所有元素都有一个默认的z-index属性，取值是0。
+z-index作用是专门用于控制定位流元素的覆盖关系的.
+
+默认情况下定位流的元素会盖住标准流的元素
+默认情况下定位流的元素后面编写的会盖住前面编写的
+如果定位流的元素设置了z-index属性，那么谁的属性值大，谁就显示在上面
+
+注意：
+1.如果两个元素的父元素都没有设置z-index属性，那么谁的z-index属性大谁就显示在上面
+  如果两个元素的父元素设置了z-index属性，那么子元素的z-index属性就会失效，就是说谁的父元素的z-index属性比较大谁就显示在上面
+-->
+<div class="pro1"></div>
+<div class="pro2"></div>
+<div class="pro3"></div>
+<div class="father1">
+    <div class="son1"></div>
+</div>
+
+<div class="father2">
+    <div class="son2"></div>
+</div>
+</body>
+</html>

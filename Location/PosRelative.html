@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .loc1{
+            background-color: red;
+        }
+        .loc2{
+            position: relative;
+            /*top: 20px;*/
+            left: 20px;
+            background-color: gray;
+            margin-bottom: 20px;
+        }
+        .loc3{
+            background-color: blue;
+        }
+        span{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<!--
+定位流分类：相对定位，绝对定位，固定定位，静态定位
+相对定位：相对于自己以前在标准流中的位置来移动
+注意：
+相对定位不脱离标准流，会在标准流中占用一份空间
+相对定位中同一方向上的定位属性只能使用一个
+由于不脱离标准流，所以，相对定位中是区分块级/行内/行内块级元素的
+因为占用标准流中的位置，所以给相对定位的元素设置margin/padding等属性时会影响标准流布局（布局时会使用移动前的位置布局）
+
+应用场景：用于对元素进行微调；配合绝对定位使用
+-->
+<div class="loc1"></div>
+<div class="loc2"></div>
+<div class="loc3"></div>
+<span>我是span</span>
+</body>
+</html>
