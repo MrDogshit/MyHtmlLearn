@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块弹性效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 100px;
+            background-color: red;
+            margin-top: 300px;
+            text-align: center;
+            /*line-height: 100px;*/
+            /*font-size: 90px;*/
+        }
+        div p{
+            line-height: 100px;
+            font-size: 90px;
+            transition: letter-spacing 3s ease 0.5s;
+
+        }
+        p:hover{
+            letter-spacing: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--编写过渡技巧：
+1.不要管过度，先编写基本界面
+2.修改我们认为需要修改的属性
+3.再回过头去给被修改属性的元素添加过度效果
+-->
+<div>
+    <p>江哥带你狂虐H5</p>
+</div>
+</body>
+</html>
