@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a伪类选择器练习</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 1000px;
+            height: 40px;
+            background-color: pink;
+        }
+        ul li{
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            float: left;
+            box-sizing: border-box;
+            width: 125px;
+            line-height: 40px;
+        }
+        ul li a{
+            display: inline-block;
+            width: 125px;
+            height: 40px;
+        }
+        a:link{
+            color: white;
+        }
+        a:hover{
+            background-color: gray;
+            color: red;
+        }
+        a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--企业开发中伪类选择器最好写在标签选择器后面
+企业开发中和a标签盒子相关的属性都卸载标签选择器中（显示模式/高度宽度/padding/margin）
+企业开发中，和a标签文字/背景相关的都写在伪类选择器中
+-->
+<ul>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+    <li><a href="#">我是链接</a></li>
+</ul>
+</body>
+</html>

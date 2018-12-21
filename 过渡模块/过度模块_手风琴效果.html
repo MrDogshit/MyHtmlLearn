@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 500px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        ul li{
+            list-style:none;
+            float: left;
+            border: 1px solid #000;
+            /*margin-left: -100px;*/
+            width: 100px;
+            height: 200px;
+            box-sizing: border-box;
+            transition: width 2s;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        ul:hover li{
+            width: 75px;
+        }
+        ul li:hover{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../微信图片_20180901183143.jpg" alt="">
+    </li>
+    <li><img src="../微信图片_20180901183143.jpg" alt="">
+    </li>
+    <li><img src="../微信图片_20180901183143.jpg" alt="">
+    </li>
+    <li><img src="../微信图片_20180901183143.jpg" alt="">
+    </li>
+    <li><img src="../微信图片_20180901183143.jpg" alt="">
+    </li>
+</ul>
+</body>
+</html>

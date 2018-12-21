@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块基本使用</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            padding: 100px;
+            background-color: red;
+            /*哪个属性需要执行过渡效果*/
+            transition: width,background-color 3s,3s linear,linear 1s;
+            /*transition: all 3s;*/
+            /*transition-property: width,background-color;*/
+            /*!*告诉系统过渡效果时长*!*/
+            /*transition-duration: 2s, 2s;*/
+        }
+        div:hover{
+            background-color: pink;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<!--过渡连写格式
+transition: 过度属性 过渡时长 过渡运动效果 过渡延迟
+如果多个属性运动的速度/过渡时间/延迟时间都一样，那么可以简写为transition: all 过渡时间 运动效果 延迟时间
+注意：连写时可以省略运动效果 和延迟，因为前两个已满足过度三要素
+-->
+<div></div>
+</body>
+</html>

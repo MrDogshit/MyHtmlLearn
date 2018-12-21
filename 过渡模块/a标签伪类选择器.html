@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签伪类选择器</title>
+    <style>
+        /*a:link{*/
+            /*color: skyblue;*/
+        /*}*/
+        /*a:visited{*/
+            /*color: pink;*/
+        /*}*/
+        /*a:hover{*/
+            /*color: orangered;*/
+        /*}*/
+        /*a:active{*/
+            /*color: black;*/
+        /*}*/
+        /*简写格式*/
+        a{
+            color: skyblue;
+        }
+        a:hover{
+            color: orangered;
+        }
+        a:active{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<!--
+a标签存在一定状态：
+默认：
+被访问过的状态：
+鼠标长按的状态：
+鼠标悬停在a标签的状态
+a标签伪类选择器：专门用来修改a标签不同状态的样式的
+格式：
+:link :修改从未被访问过状态下的样式
+:visited :修改北方问过的状态下的样式
+:active :修改鼠标长按下的样式
+:hover :修改鼠标悬停在a标签状态下的样式
+注意点：
+a标签伪类选择器可以单独出现，可以一起出现
+如果一起出现，有严格要求：先默认状态，然后被访问过的状态，然后悬停状态，最后鼠标长按状态
+如果默认状态的样式和被访问过状态的样式一样，那么可以所限
+-->
+<a href="http://www.taobao.com" target="_blank">taobao</a>
+<a href="http://www.jd.com">jd</a>
+</body>
+</html>
