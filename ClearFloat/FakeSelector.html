@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border: 1px solid #000;
+        }
+        /*p{*/
+            /*width: 50px;*/
+            /*height: 20px;*/
+            /*background-color: pink;*/
+        /*}*/
+        div::before{
+            display: block;
+            content: 'mm';
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        div::after{
+            /*制定添加的子元素的显示模式*/
+            display: block;
+            /*指定添加的子元素中存储的内容*/
+            content: 'mmp';
+            /*指定添加的子元素中的宽高*/
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            /*隐藏添加的子元素*/
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--
+伪元素选择器：给指定标签的内容前面添加一个子元素，或者给指定标签的内容后面添加一个元素
+格式：
+标签名称::before{
+    属性名称：值;
+}
+标签名称::after{
+    属性名称：值
+}
+-->
+<div>
+    <!--<p>mm</p>-->
+    我是文字
+    <!--<p>mmp</p>-->
+</div>
+</body>
+</html>

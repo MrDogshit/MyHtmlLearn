@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .abs1{
+            background-color: red;
+        }
+        .abs2{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: blue;
+        }
+        .abs3{
+            background-color: gray;
+        }
+        span{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.绝对定位：相对于body来进行定位
+注意：绝对定位的元素是脱离标准流的;绝对定位的元素不区分块级/行内/行内块级元素
+-->
+<div class="abs1"></div>
+<div class="abs2"></div>
+<div class="abs3"></div>
+<!--<span>我是span</span>-->
+</body>
+</html>
