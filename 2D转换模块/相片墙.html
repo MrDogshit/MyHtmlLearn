@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相片墙</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            height: 600px;
+            border: 1px solid #000;
+            background-color: skyblue;
+            margin-top: 150px;
+            text-align: center;
+        }
+        ul li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            margin-top: 150px;
+            display: inline-block;
+            transition: transform 1s;
+            position: relative;
+            box-shadow: 0 0 10px;
+        }
+        ul li img{
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 3px solid white;
+        }
+        ul li:nth-of-type(1){
+            transform: rotate(20deg);
+        }
+        ul li:nth-of-type(2){
+            transform: rotate(-30deg);
+        }
+        ul li:nth-of-type(3){
+
+            transform: rotate(15deg);
+        }
+        ul li:nth-of-type(4){
+            transform: rotate(45deg);
+        }
+        ul li:hover{
+            transform: scale(1.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../张学友_只愿一生爱一人_4.jpg" alt=""></li>
+    <li><img src="../张学友_梦中的你_4.jpg" alt=""></li>
+    <li><img src="../张学友_张学友1_2世纪演唱会_4.jpg" alt=""></li>
+    <li><img src="../张学友_Private%20Corner_4.jpg" alt=""></li>
+</ul>
+</body>
+</html>

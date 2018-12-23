@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>透视属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            perspective: 500px;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            /*透视：近大远小
+            注意：透视属性必须添加到需要呈现近大远小效果的元素的父元素上
+            */
+            border: 1px solid #000;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        /*默认情况下所有元素都围绕z轴旋转，想围绕哪个轴转，再rotate后加上哪个轴即可*/
+        ul li:nth-child(1){
+            transform: rotateY(60deg);
+        }
+        ul li:nth-child(2){
+            transform: rotateX(45deg);
+        }
+        ul li:nth-child(3){
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../张学友_吻别_4.jpg" alt=""></li>
+    <li><img src="../张学友_吻别_4.jpg" alt=""></li>
+    <li><img src="../张学友_吻别_4.jpg" alt=""></li>
+</ul>
+</body>
+</html>
