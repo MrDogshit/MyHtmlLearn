@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>动画：其他属性上</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: sport;
+            animation-duration: 4s;
+            /*animation-delay: 2s;*/
+            /*动画执行速度，参数与过渡相同*/
+            animation-timing-function: ease;
+            /*动画播放次数*/
+            animation-iteration-count: 3;
+            /*动画播放是否往返:alternate为往返，normal为不往返*/
+            animation-direction: alternate;
+        }
+        div:hover{
+            /*告诉系统当前动画是否暂停:running:执行 paused:暂停*/
+            animation-play-state: paused;
+        }
+        @keyframes sport {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: 500px;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+<div></div>
 </body>
 </html>

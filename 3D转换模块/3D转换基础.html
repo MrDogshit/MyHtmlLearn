@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>3D转换基础</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .father{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin: 100px auto;
+            /*
+            2D 只有宽度和高度
+            3D 是立体，高度宽度厚度
+            默认所有元素都是2D展现
+            让元素3D呈现，只需要给父元素添加transform-style: preserve-3d;即可
+            */
+            transform-style: preserve-3d;
+            perspective: 300px;
+            transform: rotateY(60deg);
+        }
+        .son{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid #000;
+            margin: 50px auto;
+            transform: rotateY(45deg);
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<!--默认元素都是2D呈现-->
+<div class="father">
+    <div class="son"></div>
+</div>
 </body>
 </html>

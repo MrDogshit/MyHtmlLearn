@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>动画：其他属性下</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ani1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: sport;
+            animation-duration: 5s;
+            /*animation-delay: 2s;*/
+            /*动画执行速度，参数与过渡相同*/
+            animation-timing-function: ease;
+            /*动画播放次数*/
+            animation-iteration-count: 3;
+            /*动画播放是否往返:alternate为往返，normal为不往返*/
+            animation-direction: alternate;
+        }
+        .ani2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 100px auto;
+            animation-name: rot;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            /*
+            通过观察，动画是有一定状态的
+            等待状态
+            执行状态
+            结束状态
+
+            animation-fill-mode：指定动画等待状态，和结束状态的样式
+            取值:
+            none:不做改变
+            forwards:让元素结束状态保持动画最后一帧的样式
+            backwords:让元素等待状态的时候显示动画第一帧的样式
+            both:让元素等待状态的时候显示动画第一帧的样式，并且让元素结束状态保持动画最后一帧的样式
+            */
+        }
+        @keyframes sport {
+            0%{
+                left: 0;
+                top: 0;
+            }
+            25%{
+                left: 300px;
+                top: 0;
+            }
+            50%{
+                left: 300px;
+                top: 300px;
+            }
+            75%{
+                left: 0;
+                top: 300px;
+            }
+            100%{
+                left: 0;
+                top: 0;
+            }
+        }
+        @keyframes rot {
+            /*from{*/
+                /*transform: rotate(0deg);*/
+            /*}*/
+            /*to{*/
+                /*transform: rotate(360deg);*/
+            /*}*/
+            0%{
+                transform: rotate(10deg);
+            }
+            50%{
+                transform: rotate(50deg);
+            }
+            100%{
+                transform: rotate(120deg);
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="ani1"></div>
+<div class="ani2"></div>
 </body>
 </html>

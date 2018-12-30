@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>动画模块连写</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: sport 2s linear 2s 3 normal;
+        }
+        @keyframes sport {
+            from{
+                margin-left: 0px;
+            }
+            to{
+                margin-left: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--动画连写格式
+animation:动画名称 动画时长 动画运动速度 动画延迟 执行次数 往返动画;
+简写:
+animation:动画名称 动画时长;
+-->
+<div>
+
+</div>
 </body>
 </html>

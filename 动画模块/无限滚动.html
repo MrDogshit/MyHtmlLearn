@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>无限滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 1000px;
+            height: 500px;
+            overflow: hidden;
+            background-color: black;
+        }
+        ul{
+            width: 3000px;
+            animation: move 10s linear 0s infinite normal;
+        }
+        ul li{
+            list-style: none;
+            width: 500px;
+            height: 500px;
+            float: left;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        @keyframes move {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -2000px;
+                /*margin-left: -100%;*/
+            }
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li{
+            opacity: 0.7;
+        }
+        ul li:hover{
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--无限滚动就是第一张或前两张图片拼接到结尾后，让其看不出动画从头开始的效果-->
+<div>
+    <ul>
+        <li><img src="../张学友_吻别_4.jpg" alt=""></li>
+        <li><img src="../张学友_梦中的你_4.jpg" alt=""></li>
+        <li><img src="../张学友_只愿一生爱一人_4.jpg" alt=""></li>
+        <li><img src="../张学友_真情流露_4.jpg" alt=""></li>
+        <li><img src="../张学友_吻别_4.jpg" alt=""></li>
+        <li><img src="../张学友_梦中的你_4.jpg" alt=""></li>
+    </ul>
+</div>
+
 </body>
 </html>
