@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 逻辑运算符 && || !
+        // a && b: 如果a是真，则直接返回b, 如果a是假，则返回a
+        // a || b: 如果a是真，则直接返回a, 如果a是假，则返回b
+        var a = 1 && 2; // 2 
+        document.write(a);
+        document.write('<hr>');
+        var a = 3 && 2; // 2 
+        document.write(a);
+        document.write('<hr>');
+        var b = 3 || 2; //3
+        document.write('b is' + b + '<hr>');
+        var b = 0 || 2; //2
+        document.write('b is' + b + '<hr>');
+        // undefined , null, NaN, '', 0, false ==> false;
+        2 > 1 && document.write('ffffffff'); // 这种语句名为短路语句
+        d = 0;
+        e = 6;
+        var event = d || e;
+        verse = !567;
+        verse = !!false; // verse = false
+    </script>
+</body>
+</html>
