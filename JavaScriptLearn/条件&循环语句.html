@@ -8,23 +8,61 @@
   </head>
   <body>
     <script>
-      if (1 > 0 && 8 <9) {
-        document.write(1111111);
-      }
-      if (1 > 0 || 8 > 9) {
-        document.write("<hr>");
-        document.write("jjjj");
-      }
-      var score = parseInt(window.prompt("input_number"));
-      if (score > 90) {
-        document.write("alibaba");
-      }
-      if (score > 80 && score < 90) {
-        document.write("tencent");
-      } 
-      else {
-        document.write("none");
-      }
+        if (1 > 0 && 8 < 9) {
+            document.write(1111111);
+        }
+        if (1 > 0 || 8 > 9) {
+            document.write("<hr>");
+            document.write("jjjj");
+        }
+        var score = parseInt(window.prompt("input_number"));
+        if (score > 90) {
+            document.write("alibaba");
+        } 
+        else if (score > 80 && score < 90) {
+            document.write("tencent");
+        } 
+        else {
+            document.write("none");
+        }
+        //   switch(score){
+        //       case :
+        //   }
+
+       
+    </script>
+    <!--经试验发现 script 是行内元素 -->
+    <script>
+         // 循环语句 for
+        document.write('<hr>');
+        for(var i = 0; i<10; i++){
+            document.write('<br>' + i);
+        }
+        // while 循环
+        i = 0;
+        while (i < 10) {
+            document.write(i)
+            i++;
+        }
+        document.write('<br>')
+        // do while，应用很少
+        m = 10;
+        do{
+            document.write(m);
+            m++;
+        }while(m < 20)
+    </script>
+    <hr>
+    <script>
+        var a = 456;
+        while (a > 0) {
+            document.write(a%10);
+            a = (a - a%10)/10;
+        }
+        // for(i=0; i<3; i++){
+        //     document.write(a%10);
+        //     a = (a - a%10)/10;
+        // }
     </script>
   </body>
 </html>
