@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js执行步骤</title>
+</head>
+<body>
+    <!-- JS三步：语法分析，预编译，解释执行 -->
+    <!-- 语法分析：即检查语法是否有错误 -->
+    <!-- 函数体系预编译：发生在函数执行前一刻，1.创建ao对象，即活跃对象（执行期上下文） 2.找形参和变量声明，将变量和形参名作为AO属性名，值为undefined 3.实参值和形参统一
+        4.在函数体里找函数声明，值赋予函数体，如果变量名有重合，会覆盖第三步-->
+    <!-- 全局预编译：1.创建GO对象，go === window -->
+    <!-- 预编译时，先生成GO，再生成AO， -->
+    <!-- 函数声明整体提升：会将函数的声明+定义提升到逻辑最前面 -->
+    <!-- 变量 声明 提升：变量的声明提升到逻辑最前面，即使定义了变量，定义不会提升 -->
+    <script>
+        test();
+        function test() {
+            console.log(111);
+        }
+    </script>
+    <p></p>
+    <script>
+        // imply global 暗示全局变量：任何变量，如果未经声明就复制，则此变量为全局对象(window)所有。如 a=123。就是window.a=13
+        // 一切声明的全局变量，都是window的属性。即var b = 122; ===> window.b = 122
+
+        // 技巧点,以下因为b没有声明，所以变量b为window的
+        function test(params) {
+            var a = b = 133;
+        }
+        test();  
+        // window.b = 133
+    </script>
+    
+</body>
+</html>

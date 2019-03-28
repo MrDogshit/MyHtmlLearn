@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类型转换</title>
+</head>
+<body>
+    <p>显式类型转换</p>
+    <script>
+        // Number(): 其他类型的变量转为数字
+        // parseInt(string, radix): 以radix进制为基底，转换为10进制
+        // var demo = 132.8;  // 132
+        // var demo = '123abc' // 123
+        var demo = 'a125'  //NaN
+        document.write(parseInt(demo)); 
+        b = '10';
+        document.write(typeof(b) + ':' + parseInt(b, 16)); 
+        // parseFloat(): 
+        var fl = '123.3.5'
+        document.write(parseFloat(fl));
+    </script>
+    <p></p>
+    <script>
+        //String: 其他类型转换为字符串
+        // var demo = 126357;
+        demo = true;
+        change = String(demo);
+        document.write(typeof(change) + ':' + change);
+        //toString(radix): 其他类型转换为字符串，与String用法不同, undefined NaN 不能用toString方法. radix: 以10进制为基底，转换为radix进制
+        demo = true; 
+        change = demo.toString();
+        document.write(typeof(change) + ':' + change);
+    </script>
+    <p></p>
+    <script>
+        //Boolean(): 其他类型转换为布尔类型
+        demo = '123';
+        document.write(Boolean(demo));
+    </script>
+    <p>隐式类型转换</p>
+    <script>
+        // isNaN(mix): 将mix进行Number(mix)转换，然后再判断是否为NaN
+        document.write(isNaN('abc')); // true
+        document.write(isNaN('123')); // false
+        document.write(isNaN(null)); // false
+    </script>
+    <p></p>
+    <script>
+        // ++ --:其他类型转换为数字类型，无法转换为数字的则为NaN 
+        var a = '21';
+        a++;
+        document.write(a);
+        // + -: 其他类型转换为数字类型，无法转换为数字的则为NaN
+        b = '567';
+        num = +b;
+        document.write(typeof(num) + ':' + num);
+        // * / %:其他类型转换为数字类型,无法转换为数字的则为NaN
+        c = 'a' * 1;
+        document.write(typeof(c) + ':' + c);
+        // > < <=  >=: 字符串与数字比较时，会将字符串转换为数字
+        res = 1 > '2';
+        document.write(res);  // false
+        res = 2 > '1';
+        document.write(res); //true
+        // == !=
+        res = 1 == '1';
+        document.write(res); //true
+        alert(res); // alert 
+        // 注意: NaN不等于任何值，NaN也不等于NaN
+        // === !==: 绝对等于，绝对不等于，不发生类型转换
+    </script>
+</body>
+</html>

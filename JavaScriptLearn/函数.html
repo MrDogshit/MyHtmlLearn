@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>函数，作用域</title>
+  </head>
+  <body>
+    <script>
+        // 函数名规则，首字母小写，后续大写。如: theFirstName
+        function theFirstName() {
+            document.write("a");
+        }
+        document.write(theFirstName);
+        // 方式2 命名函数表达式，使用不多
+        var secondFunc = function name() {
+            document.write("aaaaa");
+        };
+        // function name() 是表达式，secondFunc.name 就是 函数的名字name
+        secondFunc();
+        // 匿名函数表达式，又简化为函数表达式，使用广泛
+        var thirdFunc = function() {
+            document.write("第三种方法，匿名函数");
+        };
+        thirdFunc();
+        // secondFunc.name 就是 secondFuncz自己
+    </script>
+    <p></p>
+    <script>
+        // 函数形式, 入参不限制个数, 入参都会存放至arguments 数组中
+        function name(a, b) {
+            document.write(a + b);
+            console.log(name.length);  //形参个数
+        }
+
+        name(3, 5);
+        //
+        function arguTest(para) {
+            console.log(arguments);
+            document.write('arguments_len:' + arguments.length);  // 实参个数
+        }
+        arguTest(5, 6, 7, 8, 9);
+
+        function sum() {
+            result = 0;
+            for(i=0; i<arguments.length; i++){
+                result += arguments[i];
+            }
+            document.write('result:' + result);
+            return result;
+        }
+        sum(1, 3, 5, 6);
+
+        // 实参映射规则
+        function rule(a, b) {
+            // rule(1)
+            b = 2;
+            console.log(arguments[1]);  // undefined
+        }
+        rule(1);
+    </script>
+  </body>
+</html>
